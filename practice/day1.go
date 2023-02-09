@@ -3,24 +3,7 @@ package practice
 import (
 	"fmt"
 	"math"
-	"math/rand"
-	"time"
 )
-
-func GetSum() {
-	// 若想做一个真正的随机数，要种子
-	// seed()种子默认是1
-	//rand.Seed(1)
-	rand.Seed(time.Now().Unix())
-
-	var b [10]int
-	for i := 0; i < len(b); i++ {
-		// 产生一个0到1000随机数
-		b[i] = rand.Intn(1000)
-	}
-	sum := sumArr(b)
-	fmt.Printf("sum=%d\n", sum)
-}
 
 func sum(a, b int) int {
 	fmt.Println("sum函数中\na的值为%d", a)
@@ -30,7 +13,6 @@ func sum(a, b int) int {
 }
 
 func GetData() (int, int) {
-	GetSum()
 	return 100, 200
 }
 
