@@ -12,7 +12,7 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "hello go")
 }
 
-func main() {
+func server() {
 	http.HandleFunc("/", sayhelloName)
 	err := http.ListenAndServe(":9090", nil)
 	if err != nil {

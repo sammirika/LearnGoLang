@@ -1,18 +1,37 @@
-package src
+package practice
 
 import (
 	"fmt"
 	"math"
+	"math/rand"
+	"time"
 )
 
-func GetData() (int, int) {
-	return 100, 200
+func GetSum() {
+	// 若想做一个真正的随机数，要种子
+	// seed()种子默认是1
+	//rand.Seed(1)
+	rand.Seed(time.Now().Unix())
+
+	var b [10]int
+	for i := 0; i < len(b); i++ {
+		// 产生一个0到1000随机数
+		b[i] = rand.Intn(1000)
+	}
+	sum := sumArr(b)
+	fmt.Printf("sum=%d\n", sum)
 }
+
 func sum(a, b int) int {
 	fmt.Println("sum函数中\na的值为%d", a)
 	fmt.Println("sum函数中b的值为%d", b)
 	num := a + b
 	return num
+}
+
+func GetData() (int, int) {
+	GetSum()
+	return 100, 200
 }
 
 // 使用指针修改值,*操作符作为右值时，意义是取指针的值，作为左值时，也就是放在赋值操作符的左边时，
@@ -58,4 +77,8 @@ func day1() {
 	swap(&x, &y)
 	fmt.Printf("x,y is: %d,%d \n", x, y)
 	fmt.Println(math.Sin(45))
+}
+
+func printNessy() {
+	println("hi nessy")
 }
