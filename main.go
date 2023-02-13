@@ -11,4 +11,5 @@ func main() {
 	b := [5]int{1, 3, 5, 8, 7}
 	practice.GetIndex(b, 8)
 	practice.ShowSlice()
+	practice.ZhiZhen()
 }
