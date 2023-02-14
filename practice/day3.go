@@ -34,3 +34,31 @@ func ZhiZhen() {
 	*p = 20
 	fmt.Println(a)
 }
+
+// map类型的变量默认初始值为nil，需要使用make()函数来分配内存。语法为：
+//    make(map[KeyType]ValueType, [cap])
+func MapCase() {
+	scoreMap := make(map[string]int, 8)
+	scoreMap["nessy"] = 100
+	scoreMap["dandan"] = 90
+	fmt.Println(scoreMap)
+	fmt.Println(scoreMap["nessy"])
+	fmt.Printf("scoreMap type is %T", scoreMap)
+	//map也支持在声明的时候填充元素，例如：
+	userInfo := map[string]string{
+		"lihaoyu":   "zhenjiang",
+		"sunyalong": "chongqing",
+	}
+	fmt.Println(userInfo)
+
+	//Go语言中有个判断map中键是否存在的特殊写法，格式如下:
+	//    value, ok := map[key]
+	v, ok := scoreMap["nessy"]
+	if ok {
+		fmt.Println(v)
+	} else {
+		fmt.Println("没这个人")
+	}
+
+	//Go语言中使用for range遍历map。
+}

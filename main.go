@@ -12,4 +12,5 @@ func main() {
 	practice.GetIndex(b, 8)
 	practice.ShowSlice()
 	practice.ZhiZhen()
+	practice.MapCase()
 }
