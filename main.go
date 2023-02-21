@@ -13,4 +13,5 @@ func main() {
 	practice.ShowSlice()
 	practice.ZhiZhen()
 	practice.MapCase()
+	practice.PrintStruct()
 }

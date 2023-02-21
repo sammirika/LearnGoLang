@@ -1,6 +1,11 @@
 package practice
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"sort"
+	"time"
+)
 
 // make和new的区别
 /**
@@ -61,4 +66,36 @@ func MapCase() {
 	}
 
 	//Go语言中使用for range遍历map。
+	scoreMap["张三"] = 90
+	scoreMap["小明"] = 100
+	scoreMap["王五"] = 60
+	for k := range scoreMap {
+		fmt.Println(k)
+	}
+	//使用delete()内建函数从map中删除一组键值对，delete()函数的格式如下：
+	//    delete(map, key)
+	delete(scoreMap, "小明")
+	fmt.Println(scoreMap)
+
+	// 按顺序遍历
+	rand.Seed(time.Now().UnixNano()) //初始化随机数种子
+
+	var orderMap = make(map[string]int, 200)
+
+	for i := 0; i < 100; i++ {
+		key := fmt.Sprintf("stu%02d", i) //生成stu开头的字符串
+		value := rand.Intn(100)          //生成0~99的随机整数
+		orderMap[key] = value
+	}
+	//取出map中的所有key存入切片keys
+	var keys = make([]string, 0, 200)
+	for key := range orderMap {
+		keys = append(keys, key)
+	}
+	//对切片进行排序
+	sort.Strings(keys)
+	//按照排序后的key遍历map
+	for _, key := range keys {
+		fmt.Println(key, orderMap[key])
+	}
 }
