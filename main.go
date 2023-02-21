@@ -14,4 +14,7 @@ func main() {
 	practice.ZhiZhen()
 	practice.MapCase()
 	practice.PrintStruct()
+	practice.DelStruct()
+	practice.SortMap()
+	practice.Inherit()
 }
