@@ -17,4 +17,5 @@ func main() {
 	practice.DelStruct()
 	practice.SortMap()
 	practice.Inherit()
+	practice.SwitchCase()
 }
