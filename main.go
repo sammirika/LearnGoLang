@@ -19,4 +19,5 @@ func main() {
 	practice.Inherit()
 	practice.SwitchCase()
 	practice.RangeCase()
+	practice.SwapCase()
 }
