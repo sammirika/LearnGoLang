@@ -18,4 +18,5 @@ func main() {
 	practice.SortMap()
 	practice.Inherit()
 	practice.SwitchCase()
+	practice.RangeCase()
 }
