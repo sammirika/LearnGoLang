@@ -20,4 +20,6 @@ func main() {
 	practice.SwitchCase()
 	practice.RangeCase()
 	practice.SwapCase()
+	practice.BiBao()
+	practice.ShowNum()
 }
